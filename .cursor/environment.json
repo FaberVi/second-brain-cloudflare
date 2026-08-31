@@ -1,0 +1,10 @@
+{
+  "name": "Second Brain (Cloudflare Worker)",
+  "install": "npm ci --legacy-peer-deps && npm run cf-typegen && npm --prefix installer ci && { [ -f .dev.vars ] || printf 'AUTH_TOKEN=local-dev-token\\n' > .dev.vars; }",
+  "terminals": [
+    {
+      "name": "wrangler-dev",
+      "command": "npx wrangler dev --local --port 8787"
+    }
+  ]
+}
